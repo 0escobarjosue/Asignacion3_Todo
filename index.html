@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container contact-form col-md-8">
+      
+      <div class="stripe"><h2>Welcome to your To Do App</h2></div>
+      <label class="opacityClass" id="popUp"></label>
+      <form action="" meta="GET">
+        <div class="row border">
+          <label class="lbl " for="id">ID </label>
+          <input
+            type="text"
+            name="id"
+            id="id"
+            class=" form-control"
+            readonly
+          />
+        </div>
+        <div class="row border">
+          <label class="lbl " for="name">Task Name </label>
+          <input
+            required
+            type="text"
+            class=" form-control"
+            name="task"
+            id="task"
+            placeholder="ToDo Task"
+            required
+          />
+        </div>
+        <div class="row border">
+          <label class="lbl " for="assignee">Assignee</label>
+          <select
+            name="assignee"
+            class=" form-control"
+            id="assignee"
+            required
+          >
+            <option disabled selected hidden>Choose one</option>
+            <option>Frank</option>
+            <option>John</option>
+            <option>Alice</option>
+            <option>Mary</option>
+          </select>
+        </div>
+
+        <div class="formItems">
+          <label class="lbl"> Status </label>
+          <div class="subCheckBox">
+            <label for="Pending"> Pending </label>
+            <input
+              type="checkbox"
+              value="Pending"
+              name="status"
+              class="checkOption"
+              placeholder="status"
+              checked
+            />
+          </div>
+
+          <div class="subCheckBox">
+            <label for="Done"> Done </label>
+            <input
+              type="checkbox"
+              value="Done"
+              name="status"
+              class="checkOption"
+              placeholder="status"
+            />
+          </div>
+        </div>
+      
+      <div>
+        <button class="form btn btn-primary hoverable btnCreateTask">
+          Create Task
+        </button>
+      </div>
+     
+
+      <div class="table table-responsive ">
+        <table class="myTable">
+          <tr class="col-md-6">
+            <th class="tHeader">ID</th>
+            <th class="tHeader">Task</th>
+            <th class="tHeader">Asignee</th>
+            <th class="tHeader">Status</th>
+            <th class="tHeader">Creation Date</th>
+            <th class="tHeader">Delete</th>
+            <th class="tHeader">Edit</th>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </form>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
